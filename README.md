@@ -83,4 +83,6 @@ Bazoot is under active development, and breaking changes are possible before the
 
 ## License
 
-No license has been selected yet. Until a `LICENSE` file is added, do not assume permission to reuse, modify, or distribute the project.
+Bazoot is licensed under the [GNU Affero General Public License v3.0 only (AGPL-3.0-only)](https://www.gnu.org/licenses/agpl-3.0.en.html).
+
+You may use, modify, and self-host Bazoot. If you run a modified version for users over a network, you must offer those users the corresponding source code for that version.

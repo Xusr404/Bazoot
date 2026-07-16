@@ -1,0 +1,29 @@
+{
+  "name": "bazoot",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "workspaces": [
+    "shared",
+    "server",
+    "client"
+  ],
+  "scripts": {
+    "dev": "concurrently -n server,client -c blue,green \"npm run dev --workspace=@bazoot/server\" \"npm run dev --workspace=@bazoot/client\"",
+    "dev:client": "npm run dev --workspace=@bazoot/client",
+    "dev:server": "npm run dev --workspace=@bazoot/server",
+    "build": "npm run build --workspace=@bazoot/client",
+    "start": "concurrently -n server,client -c blue,green \"npm run start --workspace=@bazoot/server\" \"npm run preview --workspace=@bazoot/client\"",
+    "test:server": "node server/test-flow.js",
+    "test:unit": "node --test server/test/*.test.js",
+    "test:client": "node --test client/test/*.test.js",
+    "test": "node --test server/test/*.test.js && node --test client/test/*.test.js && node server/test-flow.js",
+    "load:game": "node server/load/liveGameLoad.js"
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.3"
+  }
+}

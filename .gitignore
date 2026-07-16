@@ -1,0 +1,72 @@
+# Dependencies
+node_modules/
+
+# Build and test output
+dist/
+coverage/
+.nyc_output/
+.vite/
+.cache/
+.eslintcache
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+!.env.*.example
+*.local
+.envrc
+
+# Certificates and credential files
+*.pem
+*.key
+*.pfx
+*.p12
+*.jks
+*.keystore
+secrets/
+.secrets/
+credentials/
+service-account*.json
+firebase-adminsdk-*.json
+
+# Runtime user data
+*.db
+*.db-*
+*.sqlite
+*.sqlite-*
+*.sqlite3
+*.sqlite3-*
+/server/accounts.json
+/server/sessions.json
+/server/uploads/
+/server/quizzes/*/
+
+# Logs and temporary files
+logs/
+tmp/
+temp/
+.tmp/
+*.log
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+*~
+codex-*.log
+/server/.tmp-*
+
+# Local editors, OS metadata, and agent tooling
+.idea/
+.DS_Store
+Thumbs.db
+Desktop.ini
+.claude/
+.codex/
+.codegraph/
+graphify-out/
+
+# Local implementation planning
+/ROADMAP.md
+/implementation-plans/

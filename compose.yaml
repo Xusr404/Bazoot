@@ -1,0 +1,25 @@
+services:
+  bazoot:
+    build:
+      context: .
+    image: bazoot:local
+    init: true
+    restart: unless-stopped
+    ports:
+      - "5005:5005"
+    environment:
+      NODE_ENV: production
+      PORT: 5005
+      CLIENT_URL: http://localhost:5005
+      PUBLIC_URL: http://localhost:5005
+      CLIENT_DIST_DIR: /app/client/dist
+      DATABASE_FILE: /data/bazoot.db
+      QUIZZES_DIR: /data/quizzes
+      ACCOUNTS_FILE: /data/accounts.json
+      SESSIONS_FILE: /data/sessions.json
+      UPLOADS_DIR: /data/uploads
+    volumes:
+      - bazoot-data:/data
+
+volumes:
+  bazoot-data:

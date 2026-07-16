@@ -1,0 +1,21 @@
+{
+  "name": "@bazoot/shared",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./events": "./events.js",
+    "./gameStates": "./gameStates.js",
+    "./validation": "./validation.js",
+    "./questionTypes": "./questionTypes.js",
+    "./quizValidation": "./quizValidation.js",
+    "./answers": "./answers.js",
+    "./scoring": "./scoring.js",
+    "./timing": "./timing.js",
+    "./avatars": "./avatars.js",
+    "./nicknames": "./nicknames.js",
+    "./reactions": "./reactions.js"
+  }
+}
